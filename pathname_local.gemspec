@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors      = ["Sven Fuchs"]
   s.email        = "svenfuchs@artweb-design.de"
   s.homepage     = "http://github.com/svenfuchs/pathname_local"
-  s.summary      = "[summary]"
-  s.description  = "[description]"
+  s.summary      = "Super-tiny gem that adds Pathname.local(path)"
+  s.description  = "Super-tiny gem that adds Pathname.local(path)."
 
   s.files        = `git ls-files {app,lib}`.split("\n")
   s.platform     = Gem::Platform::RUBY
