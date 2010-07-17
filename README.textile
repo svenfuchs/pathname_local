@@ -1,0 +1,18 @@
+h1. Pathname.local(path)
+
+Super-tiny gem that adds Pathname.local(path):
+
+  Pathname.module_eval do
+    def self.local(path)
+      new(File.expand_path(File.join('..', path), caller.last))
+    end
+  end
+
+So, e.g. in a test_helper.rb file one could do:
+
+  fixtures_path = Pathname.local('fixtures')
+  
+Instead of the much more verbose:
+
+  fixtures_path = Pathname.new(File.expand_path('../fixtures', __FILE__))
+  
